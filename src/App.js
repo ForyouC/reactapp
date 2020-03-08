@@ -51,10 +51,9 @@ const customers = [
 
 class App extends React.Component {
   render(){
-    const { classes } = this.props;
     return (
-      <Paper className={classes.root}>
-        <Table className={classes.table}>
+      <Paper>
+        <Table>
           <TableHead>
             <TableRow>
               <TableCell>번호</TableCell>
@@ -79,4 +78,4 @@ class App extends React.Component {
   }
 }
 
-export default withStyles(styles)(App);
+export default App;

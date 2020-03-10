@@ -100,7 +100,7 @@ class App extends React.Component {
     this.state = {
       customers: "",
       completed: 0,
-      serchKeyword: ''
+      serchKeyword: ""
     }
   }
 
@@ -108,7 +108,7 @@ class App extends React.Component {
     this.setState({
       customers: "",
       completed: 0,
-      serchKeyword: ''
+      serchKeyword: ""
     });
     this.callApi()
       .then(res => this.setState({customers: res}))
@@ -142,7 +142,7 @@ class App extends React.Component {
   render(){
     const filteredComponents = (data) => {
       data = data.filter((c) => {
-        return c.name.indexOf(this.state.serchkeyword) > -1;
+        return c.name.indexOf(this.state.serchKeyword) > -1;
       });
       return data.map((c) => {
         return <Customer stateRefresh={this.stateRefresh} key={c.id} id={c.id} img={c.image} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job}/>
